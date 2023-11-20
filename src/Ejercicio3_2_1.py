@@ -1,5 +1,6 @@
 
-def comprobardict(divisa, divisas):
+def comprobardict(divisa: str, divisas: dict):
+    divisa.capitalize()
     if divisa not in divisas:
         print(f"La divisa introducida ({divisa}), no está en el diccionario")
     else:

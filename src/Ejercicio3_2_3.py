@@ -1,4 +1,5 @@
-def comprobarFruta(fruteria, fruta):
+def comprobarFruta(fruteria, fruta: str):
+    fruta.capitalize()
     if fruta in fruteria:
         total(fruta, fruteria)
     else:
@@ -7,7 +8,7 @@ def comprobarFruta(fruteria, fruta):
 
 def total(fruta, fruteria):
     cantidad = int(input("¿Cuántos kilos quieres?: "))
-    tot= cantidad * fruteria[fruta]
+    tot = cantidad * fruteria[fruta]
     print(tot)
 
 
