@@ -4,14 +4,14 @@ def lista_de_la_compra(lista):
     total = 0
     while ingreso == True:
         clave = input(f"Artículo {cont}: ")
-        valor = input(f"Ingrese el precio de {clave}: ")
-        lista[clave] = valor
+        valor = int(input(f"Ingrese el precio de {clave}: €"))
+        lista[clave] = int(valor)
         total += valor
         terminar= input("¿Terminar? (s/n): ")
         cont+=1
         if terminar == "s":
             ingreso=False
-            print(f"\n{lista}", total +'€')
+            print(total +'€')
         
 
 
