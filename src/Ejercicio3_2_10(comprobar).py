@@ -17,7 +17,10 @@ def agregar_cliente(base_datos:dict):
     telefono = input("Ingrese el teléfono del cliente: ")
     correo = input("Ingrese el correo del cliente: ")
     preferente = input("¿Es cliente preferente? (Sí/No): ").lower() == 'sí'
-
+    if preferente in {'si','Si','Sí','sí','yes','Yes'}:
+        preferente = 'Sí'
+    else:
+        preferente = 'No'
     #TODO: Crear un diccionario cliente con toda la información...
     cliente = {}
     cliente["Nombre"] = nombre
@@ -51,7 +54,7 @@ def mostrar_cliente(base_datos:dict):
         print("\nDatos del cliente:")
         #TODO: Mostrar todos los datos del cliente
         #en cada línea de consola mostrar el par clave: valor de sus datos...
-        for key, valor in base_datos[nif]:
+        for key, valor in base_datos[nif].items():
             print(f"{key} -> {valor}")
     else:
         print(f"No se encontró un cliente con NIF {nif} en la base de datos.")
