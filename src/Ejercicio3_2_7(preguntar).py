@@ -11,7 +11,7 @@ def lista_de_la_compra(lista):
         cont+=1
         if terminar == "s":
             ingreso=False
-            print(total +'€')
+            print(total,'€')
         
 
 

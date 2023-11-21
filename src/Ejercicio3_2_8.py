@@ -4,22 +4,17 @@ def borrarconsola():
 
 
 def recogepalabras(diccionario: dict) -> dict:
-    ingreso = True
-    while ingreso:
-            palabras = input("Ingrese una palabra y su traducción separadas por : => ")
-            if palabras != "":
-                Palabra = palabras.split(":")
-                diccionario[Palabra[0]] = Palabra[1]
-            else:
-                ingreso = False
+    palabras = input("Ingrese palabra:traducción separadas por comas => ")
+    ingresos = palabras.split(", ")
+    for item in ingresos: 
+        Palabra = item.split(":")
+        diccionario[Palabra[0]] = Palabra[1]
     return diccionario
-    
-            
+         
              
 def recogefrase() -> str:
     frase = str(input("Ahora ingrese una frase para traducir: "))
     return frase
-
 
 
 def traductor(diccionario: dict, frase: str) -> str:
@@ -33,14 +28,9 @@ def traductor(diccionario: dict, frase: str) -> str:
     print(resultado)
 
 
-
-
-
 def main():
     borrarconsola()
     diccionario = {}
-    advertencia = ("Para dejar de introducir palabras, ingrese un espacio en blanco.")
-    print(advertencia)
     recogepalabras(diccionario)
     frase = recogefrase()
     traductor(diccionario,frase)
