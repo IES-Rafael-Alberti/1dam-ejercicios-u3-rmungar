@@ -16,8 +16,8 @@ def agregar_cliente(base_datos:dict):
     direccion = input("Ingrese la dirección del cliente: ")
     telefono = input("Ingrese el teléfono del cliente: ")
     correo = input("Ingrese el correo del cliente: ")
-    preferente = input("¿Es cliente preferente? (Sí/No): ").lower() == 'sí'
-    if preferente in {'si','Si','Sí','sí','yes','Yes'}:
+    preferente = input("¿Es cliente preferente? (Sí/No): ").lower()
+    if preferente in {'si','sí','yes',}:
         preferente = 'Sí'
     else:
         preferente = 'No'
