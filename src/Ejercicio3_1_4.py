@@ -1,4 +1,4 @@
-def pedirnumero(Números:list, Números2):
+def pedirnumero(Números:list, Números2:list):
     cont = 1
     while cont <= 6:
         numero= int(input(f"{cont} => "))
