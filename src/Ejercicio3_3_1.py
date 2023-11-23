@@ -1,24 +1,19 @@
 from BORRARCONSOLA import borrarconsola
 
 def datos(factura:set):
-    ingresos = True
-    while ingresos == True:
-        ingreso = input("¿Desea añadir una factura? ")
-        if ingreso in {'si','sí','Si','Sí','yes','Yes'}:
-            factura.add(input("Ingrese la información de la venta => "))
-        elif ingreso in {'no','No'}:
-            ingresos = False
-
-def facturacion(factura:set):
-
+    domicilio = set()
+    for dato in factura:
+        domicilio.add(dato[3])
+    print(f"Se han de enviar a los siguientes domicilios: {domicilio}")
+        
 
 
 
 
 def main():
-    factura = set(cliente, dia_mes, monto, domicilio)
-
-
+    borrarconsola()
+    factura = [("Nuria Costa", 5, 12780.78, "Calle Las Flores 355"), ("Jorge Russo", 7, 699, "Mirasol 218"), ("Nuria Costa", 7, 532.90, "Calle Las Flores 355"), ("Julián Rodriguez", 12, 5715.99, "La Mancha 761"), ("Jorge Russo", 15, 958, "Mirasol 218")]
+    datos(factura)
 
 
 
